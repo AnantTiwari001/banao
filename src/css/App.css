@@ -1,0 +1,181 @@
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+}
+.body {
+  position: relative;
+  height: 100%;
+}
+.heading-main {
+  font-weight: 700;
+  font-size: 65px;
+  line-height: 63px;
+  text-transform: capitalize;
+  color: #221e1e;
+  margin-bottom: 20px;
+}
+.heading-sub {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 28px;
+  color: #00236a;
+  margin-bottom: 30px;
+}
+
+.scroll-content {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 50px;
+}
+.scroll-content-mobile {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 50px;
+  display: none;
+}
+
+.scroll-content-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+.scroll-content img {
+  margin-left: 15px;
+}
+.scroll-content-mobile img {
+  margin-left: 15px;
+}
+.section {
+  width: 90%;
+  margin: 150px auto;
+}
+.banner__background {
+  height: 88vh;
+  aspect-ratio: 2 / 1;
+}
+.banner__background__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 35, 106, 0.45),
+    rgba(0, 35, 106, 0.45)
+  );
+  z-index: 1;
+}
+.banner__background__overlay__about {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 35, 106, 0.6),
+    rgba(0, 35, 106, 0.6)
+  );
+  z-index: 1;
+}
+.banner__background__overlay__client {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 35, 106, 0.4),
+    rgba(0, 35, 106, 0.4)
+  );
+  z-index: 1;
+}
+.banner__background__text {
+  width: 100%;
+  color: white;
+  position: absolute;
+  top: 24%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-title {
+  font-weight: 750;
+  font-size: 84px;
+  line-height: 65px;
+  margin-bottom: 15px;
+  text-align: center;
+  margin-top: 50px;
+  text-transform: uppercase;
+}
+.banner-content {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  width: 765px;
+  text-align: center;
+  /* font-family: "Avenir LT Pro Light" !important; */
+}
+.active-nav {
+  color: #00236a;
+}
+
+@media (max-width: 800px) {
+  .banner-title {
+    font-size: 64px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .banner-title {
+    width: 100%;
+    text-align: center;
+    /* margin: auto; */
+    font-size: 34px;
+    line-height: 41px;
+    padding-bottom: 10px;
+    transform: translateY(50%);
+  }
+  .banner__background {
+    height: 105vh;
+    aspect-ratio: 2 / 1;
+  }
+  .section {
+    margin: 90px auto;
+  }
+}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .banner-content {
+    font-size: 14px;
+    width: 305px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: centert;
+  }
+  .scroll-content-mobile {
+    display: block;
+  }
+}
+
+/* Test Css */

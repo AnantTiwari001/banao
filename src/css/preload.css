@@ -1,0 +1,15 @@
+.preload__container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: white;
+}
+
+.preload__main {
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}

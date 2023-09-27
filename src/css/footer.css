@@ -1,0 +1,116 @@
+
+@import url('https://fonts.cdnfonts.com/css/avenir-lt-pro');
+    
+.main-font {
+  font-family: 'Avenir LT Pro', sans-serif;
+}
+
+.footer {
+  color: white;
+  background: linear-gradient(
+    104.12deg,
+    #221e1e 4.29%,
+    #161616 27.95%,
+    #221e1e 83.71%
+  );
+  padding: 0px 45px 0px 45px;
+  width: 100%;
+ 
+}
+
+.footer a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer li {
+  cursor: pointer;
+}
+
+.footer li:not(:last-child) {
+  margin-right: 25px;
+}
+
+.footer-socail {
+  margin-top: -15px;
+}
+
+.footer-nav-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  text-align: left;
+}
+
+.footer-text-1 {
+  text-align: center;
+  margin-top: -10px;
+  /* font-family: 'Avenir LT Pro Light' !important; */
+  margin-bottom: 2px;
+}
+
+.footer-text-2 {
+  /* font-family: 'Avenir LT Pro Light' !important; */
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.footer-icon {
+  width: 25px;
+  height: 20px;
+}
+
+/* Media Queries */
+
+@media (max-width: 800px) {
+  .footer {
+    text-align: left;
+    height: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .footer-nav-container {
+    padding: 20px 0;
+  }
+  .footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-nav li {
+    padding-bottom: 5px;
+  }
+ .socials{
+  gap: 40px;
+ }
+  .footer-socail {
+    margin-top: 0;
+  }
+
+  .footer-socail li {
+    padding-bottom: 38px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .footer-text-1,
+  .footer-text-2 {
+    font-size: 12px;
+    width: 100%;
+  }
+}
