@@ -74,8 +74,8 @@ const Header = () => {
           <li><div className="header-border"></div></li>
           <li className={
                   activeNav === "about"
-                    ? "header-shadow"
-                    : " header-shadow"
+                    ? "active-nav"
+                    : ""
                 }>
             <Link to='/about'>
               
