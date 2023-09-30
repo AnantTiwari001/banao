@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/client.css";
 function ClientInfo({
   id,
@@ -11,8 +11,9 @@ function ClientInfo({
   countryLogo1,
   countryLogo2,
 }) {
+  const[isHover, setIsHover]=useState(false)
   return (
-    <div className='client-box'>
+    <div className='client-box' onMouseEnter={()=>!isHover && setIsHover(true)} onMouseLeave={()=>setIsHover(false)}>
       <div className='client-box-upper'>
         <img
           loading='lazy'
@@ -87,6 +88,7 @@ function ClientInfo({
           />
         </div>
       </div>
+      <p className="year-text" style={isHover ?{}: {}} >2021</p>
     </div>
   );
 }

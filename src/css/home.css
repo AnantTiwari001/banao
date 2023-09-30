@@ -7,15 +7,41 @@
   clip-path: polygon(0 0, 100% 0, 100% 93%, 53% 93%, 50% 100%, 47% 93%, 0 93%);
   position: reltive;
 }
+.carousel-controls{
+  z-index: 100;
+}
+.lowOpacity{
+  /* clip-path: polygon(0% 0%, 100% 0%, 50% 30%);; */
+  /* background-color: white; */
+  width: 35%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  opacity: 0.5;
+  z-index: 10;
+}
+
+.slick-slide{
+  /* opacity: 0.7 !important; */
+}
+.slick-active .slick-slide{
+  opacity: 0.2 !important;
+}
+
+.slick-slide{
+  transform: scale(0.9);
+}
 section {
   width: 95%;
   margin: 72px auto;
 }
 .section-heading {
-  color: #00236a;
+  font-family: "Avenir LT Pro", sans-serif;
+
+  color: #00236A;
   font-size: 20px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 24px;
   border-bottom: 2px solid #00236a;
   width: fit-content;
@@ -75,9 +101,11 @@ section {
 }
 
 .home-desc-item-text p {
+  font-family: "Avenir LT Pro", sans-serif;
+  line-height: 24px;
   width: 340px;
-  font-size: 20px;
-  font-weight: 300;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .home-client {
@@ -149,13 +177,21 @@ section {
   flex-direction: column;
   align-items: center;
 }
+.heading{
+  font-family: "Avenir LT Pro", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+
+}
 
 .home-services-content-item .heading {
+  font-family: "Avenir LT Pro", sans-serif;
   color: #000;
   text-align: center;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
+  line-height: 31.2px;
 }
 
 .home-services-content-item img {
@@ -249,13 +285,13 @@ section {
 
 .home-client-contact-details h1 {
   padding-top: 10px;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
   font-size: 45px;
   font-weight: 700;
   line-height: 63px;
   letter-spacing: 0em;
   width: 414px;
-  height: 126px;
+  /* height: 126px; */
   /* margin-bottom: -52px; */
 }
 
@@ -422,6 +458,7 @@ section {
   height: 120px;
   object-fit: contain;
   transition: ease 400ms;
+  /* border: 1px solid; */
 }
 .home-client-item img:hover {
   filter: grayscale(0);
@@ -565,7 +602,7 @@ section {
 }
 
 .home-banner-title {
-  font-weight: 500;
+  font-weight: 800;
   line-height: 65px;
   text-align: center;
   font-size: 48px;
@@ -574,7 +611,7 @@ section {
 .home-banner-content {
   text-align: center;
   font-size: 75px;
-  font-weight: 750;
+  font-weight: 500;
 }
 
 .home-banner-sub-content {
@@ -584,6 +621,7 @@ section {
   gap: 15px;
   font-size: 48px;
   font-weight: 500;
+  margin-top: 7px;
 }
 
 .home-banner-about-button {
@@ -679,6 +717,9 @@ section {
   margin-top: 45px;
 }
 @media (max-width: 1100px) {
+  .lowOpacity{
+    display: none;
+  }
   .banner-box-about {
     overflow-y: hidden;
   }

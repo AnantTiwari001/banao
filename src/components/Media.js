@@ -78,7 +78,9 @@ const Media = () => {
           className='banner__background'
         >
           <div className='banner__background__overlay__about'>
-            <div className='banner__background__text'></div>
+            <div className='banner__background__text'>
+            <p style={ width<600? {textAlign:'center', fontSize:'32px',fontWeight:'700', alignSelf:'center',position:'relative', top:'25px'}: {display:"none"}} >OUR SERVICES</p>
+            </div>
           </div>
         </ParallaxBanner>
       </div>

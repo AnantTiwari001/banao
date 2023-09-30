@@ -75,12 +75,18 @@ const Team = () => {
             ]}
             className='banner__background'
           >
-            <div className='banner__background__overlay'>
-              <div className='banner__background__text'  style={{width:'100%', textAlign:'center'}}>
-                
+            <div className='banner__background__overlay' style={{ position: 'relative' }}>
+              <div className="clip" >
+                <div style={{ flex: 1, backgroundColor: 'white' }} />
+                <div style={{ width: '150px', backgroundColor: 'white', height: '100%', position: 'relative', bottom: '50px' }} className="clip-pol" />
+                <div style={{ width: '300px', height: '50px', backgroundColor: 'white', position: 'absolute', left: '40%', bottom: '0px' }} />
+                <div style={{ flex: 1, backgroundColor: 'white' }} />
+
+              </div>
+              <div className='banner__background__text' style={{ width: '100%', textAlign: 'center' }}>
+                <p id="title">We are<br/> A&w Capital</p>
               </div>
             </div>
-            <div></div>
           </ParallaxBanner>
         </div>
         <div className='team-container' id='scroll-first-section'>

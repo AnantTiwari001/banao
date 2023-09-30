@@ -75,7 +75,7 @@ const Header = () => {
           <li className={
                   activeNav === "about"
                     ? "active-nav"
-                    : ""
+                    : " "
                 }>
             <Link to='/about'>
               
@@ -134,7 +134,7 @@ const Header = () => {
         </ul>
         
             <Link to='/contact' className='header-btn'>
-              Contact Us
+              Contact us
             </Link>
          
         <div className='hamburger-icon'>

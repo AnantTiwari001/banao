@@ -257,13 +257,13 @@ function Home() {
           <section className='home-client'>
             <div className='section-heading'>Our Clientele</div>
             <div className='home-client-item'>
-              <img src={clientLogo3} alt='adidas' />
+              <img src={clientLogo3} style={{ objectFit: 'cover', position: 'relative', right: '10px' }} alt='adidas' />
 
               <img src={clientLogo2} alt='adidas' />
 
-              <img src={clientLogo4} alt='adidas' />
+              <img src={clientLogo4} style={{ objectFit: 'cover' }} alt='adidas' />
 
-              <img src={clientLogo1} alt='adidas' />
+              <img src={clientLogo1} style={{ scale: '1.3' }} alt='adidas' />
               <img src={clientLogo5} alt='adidas' />
 
               <img src={clientLogo6} alt='adidas' />
@@ -278,7 +278,9 @@ function Home() {
               <div className='section-heading'>Testimonials</div>
             </div>
 
-            <div className='carousel-slick-container'>
+            <div className='carousel-slick-container' style={{position:'relative'}} >
+              <div className="lowOpacity" ></div>
+              <div className="lowOpacity" style={{right:0}} ></div>
               <div className='home-carousel-item-center'></div>
               <Slider
                 {...settings}
@@ -444,7 +446,7 @@ function Home() {
                   </div>
                 </div>
               </Slider>
-              <div className='carousel-controls'>
+              <div className='carousel-controls' style={{zIndex:'100'}}>
                 <div className='carousel-controls-child' onClick={() => { }}>
                   <FaChevronLeft
                     className='chevron-icon'
@@ -473,16 +475,15 @@ function Home() {
             <div className='home-client-contact-details'>
               <div className='section-heading-contact-us'>Contact Us</div>
               <h1
-                style={{ textTransform: "uppercase" }}
                 className='desktop-client-contact-header'
               >
-                Contact Our Support Team
+                Write To Us
               </h1>
 
               <p>Need to get in touch with our team? We’re all ears.</p>
               <div className='mobile-header-btn'>
                 <Link to='/contact' className='header-btn '>
-                  Write to us
+                  Contact us
                 </Link>
               </div>
             </div>

@@ -113,7 +113,9 @@ const Services = () => {
             className='banner__background'
           >
             <div className='banner__background__overlay'>
-              <div className='banner__background__text'></div>
+              <div className='banner__background__text'>
+                <p style={ width<600? {textAlign:'center', fontSize:'32px',fontWeight:'700', alignSelf:'center'}: {display:"none"}} >OUR SERVICES</p>
+              </div>
             </div>
             <div></div>
           </ParallaxBanner>
