@@ -467,9 +467,9 @@ const About = () => {
               loading='lazy'
               src={npasport}
               style={{
-                width: "30px",
+                width: "20px",
                 position: "absolute",
-                left: 140,
+                left: 148,
                 top: 30,
               }}
               alt='circle-1-image'
@@ -480,7 +480,7 @@ const About = () => {
               style={{
                 width: "30px",
                 position: "absolute",
-                left: 80,
+                left: 108,
                 top: 100,
               }}
               alt='circle-1-image'
@@ -492,7 +492,7 @@ const About = () => {
                 width: "50px",
                 position: "absolute",
                 left: 40,
-                top: 205,
+                top: 200,
               }}
               alt='circle-1-image'
             />
@@ -503,7 +503,7 @@ const About = () => {
                 width: "50px",
                 position: "absolute",
                 left: 17,
-                top: 130,
+                top: 119,
               }}
               alt='circle-1-image'
             />
@@ -513,8 +513,8 @@ const About = () => {
               style={{
                 width: "60px",
                 position: "absolute",
-                left: 87,
-                top: 150,
+                left: 79,
+                top: 157,
               }}
               alt='circle-1-image'
             />
@@ -525,8 +525,8 @@ const About = () => {
               style={{
                 width: "90px",
                 position: "absolute",
-                top: 50,
-                left: 170,
+                top: 60,
+                left: 181,
               }}
               src={wing}
               className='wing'
@@ -537,7 +537,7 @@ const About = () => {
               style={{
                 width: "40px",
                 position: "absolute",
-                top: 100,
+                top: 108,
                 left: 140,
               }}
               src={esl}
@@ -549,7 +549,7 @@ const About = () => {
               style={{
                 width: "70px",
                 position: "absolute",
-                top: 190,
+                top: 210,
                 left: 200,
               }}
               src={roblox}
@@ -560,8 +560,8 @@ const About = () => {
               style={{
                 width: "55px",
                 position: "absolute",
-                top: 118,
-                left: 220,
+                top: 145,
+                left: 213,
               }}
               src={n}
               alt=''
@@ -571,8 +571,8 @@ const About = () => {
               style={{
                 width: "50px",
                 position: "absolute",
-                top: 20,
-                right: 140,
+                top: 17,
+                right: 120,
               }}
               src={unity}
               className='unity'
@@ -590,8 +590,8 @@ const About = () => {
               style={{
                 width: "40px",
                 position: "absolute",
-                bottom: 20,
-                right: 100,
+                bottom: 23,
+                right: 101,
               }}
               alt=''
             />
@@ -602,7 +602,7 @@ const About = () => {
                 width: "50px",
                 position: "absolute",
                 bottom: 40,
-                left: 80,
+                left: 78,
               }}
               alt=''
             />
@@ -611,8 +611,8 @@ const About = () => {
               style={{
                 width: "45px",
                 position: "absolute",
-                bottom: 80,
-                left: 30,
+                bottom: 86,
+                left: 32,
               }}
               src={jio}
               alt=''
@@ -622,8 +622,8 @@ const About = () => {
               style={{
                 width: "35px",
                 position: "absolute",
-                bottom: 110,
-                left: 110,
+                bottom: 118,
+                left: 127,
               }}
               src={inshort}
               alt=''
