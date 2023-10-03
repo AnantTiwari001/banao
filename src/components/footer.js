@@ -57,9 +57,9 @@ const Footer = () => {
         </ul>
       </div>
       <div className='footer-text-1'>
-        © 2023 A&W Capital-Sports and Media Advisory
+        © 2022 A&W Capital-Sports and Media Advisory
       </div>
-      <div className='footer-text-2'> All rights reserved.</div>
+      {/* <div className='footer-text-2'> All rights reserved.</div> */}
     </div>
   );
 };

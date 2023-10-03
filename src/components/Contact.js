@@ -70,7 +70,7 @@ function Contact() {
                     <p>
                       {
                         contactInfo &&
-                        <a href={`mailto:${contactInfo['company info'][0]?.mail_id}`}>
+                        <a style={{ textDecoration: 'none', color: 'inherit' }} href={`mailto:${contactInfo['company info'][0]?.mail_id}`}>
                           {contactInfo && contactInfo["company info"][0]?.mail_id}
                         </a>
                       }
@@ -89,11 +89,11 @@ function Contact() {
                   <p className='main'>Office</p>
                   <p>Come say hello at our office HQ</p>
                   <div className='flex-info-sub-text'>
-                    <p>
+                    <p style={{fontWeight:550}}>Address 1 - {' '}
                       {contactInfo &&
                         contactInfo["company info"][0]?.address_id_1}
                     </p>
-                    <p>
+                    <p style={{fontWeight:550}}>Address 2 - {' '}
                       {contactInfo &&
                         contactInfo["company info"][0]?.address_id_2}
                     </p>
@@ -125,7 +125,7 @@ function Contact() {
               id=''
               placeholder='Your Name'
               value={name}
-              onChange={(e) => {setName(e.target.value); (e.target.value.length<3)? setValidateError({...validateError, name:ErrorStatement.name}) : setValidateError({...validateError, name:''}) }}
+              onChange={(e) => { setName(e.target.value); (e.target.value.length < 3) ? setValidateError({ ...validateError, name: ErrorStatement.name }) : setValidateError({ ...validateError, name: '' }); console.log('constact info', contactInfo) }}
             />
             <p className="error-msg">{validateError.name}</p>
             <p className='form-text'>Email</p>
@@ -136,7 +136,7 @@ function Contact() {
               id=''
               placeholder='you@name.com'
               value={mail}
-              onChange={(e) => {setMail(e.target.value); (e.target.value.endsWith('.com') || e.target.value.endsWith('.in') || e.target.value.endsWith('.edu')) ? setValidateError({...validateError, mail:''}) : setValidateError({...validateError, mail:ErrorStatement.mail}) }}
+              onChange={(e) => { setMail(e.target.value); (e.target.value.endsWith('.com') || e.target.value.endsWith('.in') || e.target.value.endsWith('.edu')) ? setValidateError({ ...validateError, mail: '' }) : setValidateError({ ...validateError, mail: ErrorStatement.mail }) }}
             />
             <p className="error-msg">{validateError.mail}</p>
             <p className='form-text'>How Can We Help You?</p>
@@ -148,7 +148,7 @@ function Contact() {
               cols='30'
               rows='10'
               value={content}
-              onChange={(e) => {setContent(e.target.value); (e.target.value.length < 10)? setValidateError({...validateError, content:ErrorStatement.content}): setValidateError({...validateError, content:''}) }}
+              onChange={(e) => { setContent(e.target.value); (e.target.value.length < 10) ? setValidateError({ ...validateError, content: ErrorStatement.content }) : setValidateError({ ...validateError, content: '' }) }}
             ></textarea>
             <p className="error-msg">{validateError.content}</p>
             {isSent ? (

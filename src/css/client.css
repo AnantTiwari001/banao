@@ -6,6 +6,10 @@
 .two_images_3-second{
   scale: 0.8;
 }
+.footer-nav-container{
+  position: relative;
+  top: 15px;
+}
 
 .year-text{
   text-align: center;
