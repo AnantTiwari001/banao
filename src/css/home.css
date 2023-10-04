@@ -629,9 +629,10 @@ section {
   flex-direction: row;
   justify-content: center;
   gap: 15px;
-  font-size: 43px;
+  font-size: 30px;
   font-weight: 500;
   /* margin-top: 3px; */
+  font-family: "Avenir LT Pro Light" Arial, Helvetica, sans-serif;
   
 }
 
