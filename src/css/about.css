@@ -693,6 +693,10 @@
 /* Media Queries */
 
 @media (max-width: 1200px) {
+  .global-image-overlay{
+    bottom: 95px;
+    left: 0;
+  }
   .parallax-content-text-header {
     width: 100%;
   }
@@ -730,6 +734,9 @@
 }
 
 @media (max-width: 850px) {
+  .global-image-overlay{
+    right: 0;
+  }
   /* .banner-about-container {
     background: url("../assets/Banners (mobile)/banner.png");
     background-repeat: no-repeat;
@@ -883,7 +890,7 @@
     display: flex;
   }
   .our-global-presence-parent {
-    max-width: 800px;
+    /* max-width: 800px; */
     display: flex;
     justify-content: center;
   }
