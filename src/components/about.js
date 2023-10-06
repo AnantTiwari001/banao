@@ -386,9 +386,9 @@ const About = () => {
             className='dream-main-mobile circle-1-item circle-2-item'
             alt='dream11'
           />
-          <div className='circle-text text-sports'>Sports</div>
-          <div className='circle-text text-gaming'>Gaming</div>
-          <div className='circle-text circle-text-digital-mobile'>
+          <div className='circle-text text-sports mobile-text1'>Sports</div>
+          <div className='circle-text text-gaming mobile-text1'>Gaming</div>
+          <div className='circle-text circle-text-digital-mobile mobile-text1'>
             Digital Media
           </div>
           <div className='circle circle-1 circle-mobile-1'>

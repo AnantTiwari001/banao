@@ -535,12 +535,12 @@
 .text-sports {
   position: absolute;
   top: 0;
-  left: 8%;
+  left: 5%;
 }
 .text-gaming {
   position: absolute;
   top: 0;
-  right: -4%;
+  right: -19%;
 }
 .about ul {
   list-style: none;
@@ -629,7 +629,7 @@
   position: absolute;
   bottom: -25px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-40%);
   width: 200px;
 }
 .about__service__container {
@@ -801,7 +801,7 @@
     /* left: 1px; */
   }
   .about__parallax-section {
-    margin-bottom: 400px;
+    margin-bottom: 200px;
   }
 
   .about__service {
@@ -932,7 +932,7 @@
     padding-right: 0;
   }
   .our-global-presence-parent {
-    max-width: 400px;
+    /* max-width: 400px; */
     justify-content: center;
   }
   .our-global-card {
@@ -1046,7 +1046,7 @@
     /* transform: translateY(-10%); */
   }
 }
-@media (max-width: 370px) {
+@media (max-width: 500px) {
   .about__service {
     transform: translateX(0);
   }
@@ -1064,9 +1064,9 @@
 
 @media (max-width: 330px) {
   .about__parallax-content {
-    height: 930px;
+    /* height: 930px; */
   }
   .parallax-image {
-    top: 100%;
+    /* top: 100%; */
   }
 }
