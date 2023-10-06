@@ -22,9 +22,9 @@ const Footer = () => {
           <li>
             <p onClick={() => navigate("/privacy")}>Privacy Policy</p>
           </li>
-          <li>
+          {/* <li>
             <p>Terms of services</p>
-          </li>
+          </li> */}
           <li>
             <Link
               to='/contact'
