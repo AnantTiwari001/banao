@@ -2,6 +2,24 @@
   position: relative;
 }
 
+/* .mobile-circle-image{
+  transform: scale(0.7);
+} */
+#main-icon1{
+  scale: 0.75 ;
+  right: 107px;
+}
+#main-icon2{
+  scale: 0.75;
+  top: 212px;
+}
+#main-icon3{
+  scale: 0.75;
+}
+#mobile-circle img{
+  transform: scale(0.75);
+}
+
 .about__banner {
   /* height: calc(100vh - 100px); */
   height: 88vh;
@@ -1059,6 +1077,9 @@
   }
   .parallax-image {
     top: 95%;
+  }
+  #mobile-circle{
+    transform: translateY(110px);
   }
 }
 

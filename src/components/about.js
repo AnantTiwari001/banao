@@ -204,9 +204,12 @@ const About = () => {
   }, [dispatch]);
 
   return (
-    <div className='body main-font' style={{width:'100%', overflow:'hidden'}}>
-      {currentNavState && <div className='mobile-overlay'></div>}
-      <div className='about__banner'>
+    <div
+      className="body main-font"
+      style={{ width: "100%", overflow: "hidden" }}
+    >
+      {currentNavState && <div className="mobile-overlay"></div>}
+      <div className="about__banner">
         <ParallaxBanner
           layers={[
             {
@@ -228,11 +231,11 @@ const About = () => {
               expanded: false,
             },
           ]}
-          className='banner__background'
+          className="banner__background"
         >
-          <div className='banner__background__overlay__about'>
-            <div className='banner__background__text'>
-              <div className='banner-title'>
+          <div className="banner__background__overlay__about">
+            <div className="banner__background__text">
+              <div className="banner-title">
                 {width > 800 ? (
                   aboutData?.banner[0]?.banner_title
                 ) : (
@@ -249,7 +252,7 @@ const About = () => {
                   </>
                 )}
               </div>
-              <div className='about-banner-content-subheading'>
+              <div className="about-banner-content-subheading">
                 <h4>A Differentiated Investment Bank</h4>
               </div>
             </div>
@@ -259,80 +262,80 @@ const About = () => {
       </div>
 
       <div
-        className='about-section about__parallax-section'
-        id='scroll-first-section'
+        className="about-section about__parallax-section"
+        id="scroll-first-section"
       >
-        <div className='about__parallax-content'>
+        <div className="about__parallax-content">
           {/* <div style={{ width: "140px" }} className='overview'>
             Overview
           </div> */}
-          <div className='about__carousel__container'>
+          <div className="about__carousel__container">
             <Carousel interval={3000} pause={false}>
               <Carousel.Item>
                 <Carousel.Caption>
-                  <h3 className='carousel-caption-header'>2016</h3>
-                  <p className='carousel-caption-text'>Founded in</p>
+                  <h3 className="carousel-caption-header">2016</h3>
+                  <p className="carousel-caption-text">Founded in</p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
                 <Carousel.Caption>
-                  <h3 className='carousel-caption-header'>3</h3>
-                  <p className='carousel-caption-text'>Sectors of focus</p>
+                  <h3 className="carousel-caption-header">3</h3>
+                  <p className="carousel-caption-text">Sectors of focus</p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
                 <Carousel.Caption>
-                  <h3 className='carousel-caption-header'>8</h3>
-                  <p className='carousel-caption-text'>Member team</p>
+                  <h3 className="carousel-caption-header">8</h3>
+                  <p className="carousel-caption-text">Member team</p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
                 <Carousel.Caption>
-                  <h3 className='carousel-caption-header'>HQ</h3>
-                  <p className='carousel-caption-text'>London</p>
+                  <h3 className="carousel-caption-header">HQ</h3>
+                  <p className="carousel-caption-text">London</p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
                 <Carousel.Caption>
-                  <h3 className='special-carousel-caption-header'>
+                  <h3 className="special-carousel-caption-header">
                     India office
                   </h3>
-                  <p className='carousel-caption-text'>Mumbai</p>
+                  <p className="carousel-caption-text">Mumbai</p>
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>
-            <div className='carousel-text-description'>
+            <div className="carousel-text-description">
               <div>
-                <img loading='lazy' src={icon2} alt='sports-icon' /> Sports
+                <img loading="lazy" src={icon2} alt="sports-icon" /> Sports
               </div>
               <div>
                 {" "}
-                <img loading='lazy' src={icon3} alt='sports-icon' />
+                <img loading="lazy" src={icon3} alt="sports-icon" />
                 Gaming
               </div>
               <div>
                 {" "}
-                <img loading='lazy' src={icon1} alt='sports-icon' />
+                <img loading="lazy" src={icon1} alt="sports-icon" />
                 Digital Media
               </div>
             </div>
           </div>
           <Parallax
             translateY={[5, -5, 10]}
-            className='parallax-text-container'
+            className="parallax-text-container"
           >
-            <div className='parallax-content-text'>
-              <div className='parallax-content-text-header'>
+            <div className="parallax-content-text">
+              <div className="parallax-content-text-header">
                 {aboutData?.about[0]?.title}
               </div>
-              <div className='parallax-content-text-content'>
+              <div className="parallax-content-text-content">
                 <p>{aboutData?.about[0]?.content_1}</p>
                 {aboutData?.about[0]?.content_2}
               </div>
             </div>
           </Parallax>
         </div>
-        <div className='parallax-image'>
+        <div className="parallax-image">
           <ParallaxBanner
             layers={[
               {
@@ -353,118 +356,303 @@ const About = () => {
                 // expanded: false,
               },
             ]}
-            className='parallax__background'
+            className="parallax__background"
           >
-            <div className='parallax-image-overlay'></div>
+            <div className="parallax-image-overlay"></div>
           </ParallaxBanner>
         </div>
       </div>
 
-      <div className='section about-grid'>
-        <div className='circle-box-mobile' style={{ position: "relative" }}>
+      <div className="section about-grid">
+        <div
+          className="circle-box-mobile"
+          id="mobile-circle"
+          style={{ position: "relative" }}
+        >
           <img
-            loading='lazy'
+            loading="lazy"
             src={sk}
-            className='sk-main-mobile circle-2-item circle-1-item circle-3-item'
-            alt='sk'
+            className="sk-main-mobile circle-2-item circle-1-item circle-3-item"
+            id="main-icon3"
+            alt="sk"
           />
           <img
-            loading='lazy'
-            className='pngwing-main-mobile circle-1-item circle-3-item'
+            loading="lazy"
+            className="pngwing-main-mobile circle-1-item circle-3-item"
             src={pngwing}
-            alt='pngwing'
+            alt="pngwing"
+            id="main-icon2"
           />
           <img
-            loading='lazy'
+            loading="lazy"
             src={d}
-            className='d-main-mobile circle-2-item circle-3-item'
-            alt='d'
+            className="d-main-mobile circle-2-item circle-3-item"
+            id="main-icon1"
+            style={{scale:0.1}}
+            alt="d"
           />
           <img
-            loading='lazy'
+            loading="lazy"
             src={dream11}
-            className='dream-main-mobile circle-1-item circle-2-item'
-            alt='dream11'
+            className="dream-main-mobile circle-1-item circle-2-item"
+            alt="dream11"
           />
-          <div className='circle-text text-sports mobile-text1'>Sports</div>
-          <div className='circle-text text-gaming mobile-text1'>Gaming</div>
-          <div className='circle-text circle-text-digital-mobile mobile-text1'>
+          <div className="circle-text text-sports mobile-text1">Sports</div>
+          <div className="circle-text text-gaming mobile-text1">Gaming</div>
+          <div className="circle-text circle-text-digital-mobile mobile-text1">
             Digital Media
           </div>
-          <div className='circle circle-1 circle-mobile-1'>
-            <img loading='lazy' src={ipl} className='ipl-mobile' alt='ipl' />
-            <img loading='lazy' src={nba} className='nba-mobile' alt='nba' />
-          </div>
-          <div className='circle circle-2 circle-mobile-2'>
+          <div className="circle circle-1 circle-mobile-1">
+            {/* <img loading='lazy' src={ipl} className='ipl-mobile' alt='ipl' />
+            <img loading='lazy' src={nba} className='nba-mobile' alt='nba' /> */}
             <img
+              loading="lazy"
+              src={ipl}
+              style={{
+                width: "70px",
+                position: "absolute",
+                left: 22,
+                top: 37,
+              }}
+              className="mobile-circle-image"
+              alt="circle-1-image"
+            />
+            <img
+              loading="lazy"
+              src={npasport}
+              className="mobile-circle-image"
+              style={{
+                width: "20px",
+                position: "absolute",
+                left: 97,
+                top: 12,
+              }}
+              alt="circle-1-image"
+            />
+            <img
+              loading="lazy"
+              src={nfl}
+              className="mobile-circle-image"
+              style={{
+                width: "30px",
+                position: "absolute",
+                left: 77,
+                top: 65,
+              }}
+              alt="circle-1-image"
+            />
+            <img
+              loading="lazy"
+              src={king}
+              className="mobile-circle-image"
+              style={{
+                width: "50px",
+                position: "absolute",
+                left: 28,
+                top: 132,
+              }}
+              alt="circle-1-image"
+            />
+            <img
+              loading="lazy"
+              src={king2}
+              className="mobile-circle-image"
+              style={{
+                width: "50px",
+                position: "absolute",
+                left: 8,
+                top: 78,
+              }}
+              alt="circle-1-image"
+            />
+            <img
+              loading="lazy"
+              src={pro}
+              className="mobile-circle-image"
+              style={{
+                width: "60px",
+                position: "absolute",
+                left: 51,
+                top: 106,
+              }}
+              alt="circle-1-image"
+            />
+          </div>
+          <div className="circle circle-2 circle-mobile-2">
+            {/* <img
               loading='lazy'
               src={wing}
               className='wing mobile-wing'
               alt='wing-img'
             />
-            <img loading='lazy' src={unity} className='unity-mobile' alt='unity' />
-          </div>
-          <div
-            className='circle circle-3 circle-mobile-3'
-            style={{ position: "absolute", top: "32%", left: "24%" }}
-          >
+            <img loading='lazy' src={unity} className='unity-mobile' alt='unity' /> */}
             <img
-              loading='lazy'
-              src={disney}
-              alt='disney'
-              className='mobile-disney'
+              loading="lazy"
+              className="mobile-circle-image wing"
+              style={{
+                width: "90px",
+                position: "absolute",
+                top: 38,
+                left: 115,
+              }}
+              src={wing}
+              // className='wing'
+              alt=""
             />
             <img
-              loading='lazy'
+              loading="lazy"
+              style={{
+                width: "40px",
+                position: "absolute",
+                top: 76,
+                left: 102,
+              }}
+              className="mobile-circle-image wing"
+              src={esl}
+              // className='wing'
+              alt=""
+            />
+            <img
+              loading="lazy"
+              style={{
+                width: "70px",
+                position: "absolute",
+                top: 147,
+                left: 129,
+              }}
+              className="mobile-circle-image"
+              src={roblox}
+              alt=""
+            />
+            <img
+              loading="lazy"
+              style={{
+                width: "55px",
+                position: "absolute",
+                top: 97,
+                left: 143,
+              }}
+              className="mobile-circle-image"
+              src={n}
+              alt=""
+            />
+            <img
+              loading="lazy"
+              style={{
+                width: "50px",
+                position: "absolute",
+                top: 13,
+                right: 69,
+              }}
+              src={unity}
+              className="mobile-circle-image unity"
+              // className='unity'
+              alt=""
+            />
+          </div>
+          <div
+            className="circle circle-3 circle-mobile-3"
+            style={{ position: "absolute", top: "32%", left: "24%" }}
+          >
+            {/* <img loading='lazy'src={disney} alt='disney' className='mobile-disney'/>
+            <img loading='lazy' src={sharechat} className='sharechat mobile-sharechat' alt='sharechat'/> */}
+            <img loading="lazy" src={disney} alt="disney" className="disney" style={{
+              bottom:62,
+              right:6
+            }} />
+            <img
+              loading="lazy"
               src={sharechat}
-              className='sharechat mobile-sharechat'
-              alt='sharechat'
+              style={{
+                width: "40px",
+                position: "absolute",
+                bottom: 21,
+                right: 117,
+              }}
+              className="mobile-circle-image"
+              alt=""
+            />
+            <img
+              loading="lazy"
+              src={hbo}
+              className="mobile-circle-image"
+              style={{
+                width: "50px",
+                position: "absolute",
+                bottom: 30,
+                left: 107,
+              }}
+              alt=""
+            />
+            <img
+              loading="lazy"
+              className="mobile-circle-image"
+              style={{
+                width: "45px",
+                position: "absolute",
+                bottom: 62,
+                left: 20,
+              }}
+              src={jio}
+              alt=""
+            />
+            <img
+              loading="lazy"
+              className="mobile-circle-image"
+              style={{
+                width: "35px",
+                position: "absolute",
+                bottom: 83,
+                left: 84,
+              }}
+              src={inshort}
+              alt=""
             />
           </div>
         </div>
-        <div className='circle-box'>
+        <div className="circle-box">
           <img
-            loading='lazy'
+            loading="lazy"
             src={sk}
             style={{ width: "60px", marginLeft: 10, marginBottom: 10 }}
-            className='sk-main circle-2-item-desk circle-1-item-desk circle-3-item-desk'
-            alt=''
+            className="sk-main circle-2-item-desk circle-1-item-desk circle-3-item-desk"
+            alt=""
           />
           <img
-            loading='lazy'
-            className='pngwing-main circle-1-item-desk circle-3-item-desk'
+            loading="lazy"
+            className="pngwing-main circle-1-item-desk circle-3-item-desk"
             style={{ width: "60px", marginLeft: 10 }}
             src={pngwing}
-            alt=''
+            alt=""
           />
           <img
-            loading='lazy'
+            loading="lazy"
             src={d}
             style={{ width: "50px", marginLeft: 10, marginBottom: 10 }}
-            className='d-main circle-2-item-desk circle-3-item-desk'
-            alt=''
+            className="d-main circle-2-item-desk circle-3-item-desk"
+            alt=""
           />
           <img
-            loading='lazy'
+            loading="lazy"
             style={{ width: "100px" }}
             src={dream11}
-            className='dream-main circle-1-item-desk circle-2-item-desk'
-            alt=''
+            className="dream-main circle-1-item-desk circle-2-item-desk"
+            alt=""
           />
-          <div className='circle-text text-sports-desk'>Sports</div>
-          <div className='circle-text text-gaming-desk'>Gaming</div>
-          <div className='circle-text text-digital-media-desk'>
+          <div className="circle-text text-sports-desk">Sports</div>
+          <div className="circle-text text-gaming-desk">Gaming</div>
+          <div className="circle-text text-digital-media-desk">
             Digital Media
           </div>
-          <div className='circle circle-1 circle-1-desk'>
+          <div className="circle circle-1 circle-1-desk">
             <img
-              loading='lazy'
+              loading="lazy"
               src={ipl}
               style={{ width: "70px", position: "absolute", left: 50, top: 50 }}
-              alt='circle-1-image'
+              alt="circle-1-image"
             />
             <img
-              loading='lazy'
+              loading="lazy"
               src={npasport}
               style={{
                 width: "20px",
@@ -472,10 +660,10 @@ const About = () => {
                 left: 148,
                 top: 30,
               }}
-              alt='circle-1-image'
+              alt="circle-1-image"
             />
             <img
-              loading='lazy'
+              loading="lazy"
               src={nfl}
               style={{
                 width: "30px",
@@ -483,10 +671,10 @@ const About = () => {
                 left: 108,
                 top: 100,
               }}
-              alt='circle-1-image'
+              alt="circle-1-image"
             />
             <img
-              loading='lazy'
+              loading="lazy"
               src={king}
               style={{
                 width: "50px",
@@ -494,10 +682,10 @@ const About = () => {
                 left: 40,
                 top: 200,
               }}
-              alt='circle-1-image'
+              alt="circle-1-image"
             />
             <img
-              loading='lazy'
+              loading="lazy"
               src={king2}
               style={{
                 width: "50px",
@@ -505,10 +693,10 @@ const About = () => {
                 left: 17,
                 top: 119,
               }}
-              alt='circle-1-image'
+              alt="circle-1-image"
             />
             <img
-              loading='lazy'
+              loading="lazy"
               src={pro}
               style={{
                 width: "60px",
@@ -516,12 +704,12 @@ const About = () => {
                 left: 79,
                 top: 157,
               }}
-              alt='circle-1-image'
+              alt="circle-1-image"
             />
           </div>
-          <div className='circle circle-2 circle-2-desk'>
+          <div className="circle circle-2 circle-2-desk">
             <img
-              loading='lazy'
+              loading="lazy"
               style={{
                 width: "90px",
                 position: "absolute",
@@ -529,11 +717,11 @@ const About = () => {
                 left: 181,
               }}
               src={wing}
-              className='wing'
-              alt=''
+              className="wing"
+              alt=""
             />
             <img
-              loading='lazy'
+              loading="lazy"
               style={{
                 width: "40px",
                 position: "absolute",
@@ -541,11 +729,11 @@ const About = () => {
                 left: 140,
               }}
               src={esl}
-              className='wing'
-              alt=''
+              className="wing"
+              alt=""
             />
             <img
-              loading='lazy'
+              loading="lazy"
               style={{
                 width: "70px",
                 position: "absolute",
@@ -553,10 +741,10 @@ const About = () => {
                 left: 200,
               }}
               src={roblox}
-              alt=''
+              alt=""
             />
             <img
-              loading='lazy'
+              loading="lazy"
               style={{
                 width: "55px",
                 position: "absolute",
@@ -564,10 +752,10 @@ const About = () => {
                 left: 213,
               }}
               src={n}
-              alt=''
+              alt=""
             />
             <img
-              loading='lazy'
+              loading="lazy"
               style={{
                 width: "50px",
                 position: "absolute",
@@ -575,17 +763,17 @@ const About = () => {
                 right: 120,
               }}
               src={unity}
-              className='unity'
-              alt=''
+              className="unity"
+              alt=""
             />
           </div>
           <div
-            className='circle circle-3 circle-3-desk'
+            className="circle circle-3 circle-3-desk"
             style={{ position: "relative" }}
           >
-            <img loading='lazy' src={disney} alt='disney' className='disney' />
+            <img loading="lazy" src={disney} alt="disney" className="disney" />
             <img
-              loading='lazy'
+              loading="lazy"
               src={sharechat}
               style={{
                 width: "40px",
@@ -593,10 +781,10 @@ const About = () => {
                 bottom: 23,
                 right: 101,
               }}
-              alt=''
+              alt=""
             />
             <img
-              loading='lazy'
+              loading="lazy"
               src={hbo}
               style={{
                 width: "50px",
@@ -604,10 +792,10 @@ const About = () => {
                 bottom: 40,
                 left: 78,
               }}
-              alt=''
+              alt=""
             />
             <img
-              loading='lazy'
+              loading="lazy"
               style={{
                 width: "45px",
                 position: "absolute",
@@ -615,10 +803,10 @@ const About = () => {
                 left: 32,
               }}
               src={jio}
-              alt=''
+              alt=""
             />
             <img
-              loading='lazy'
+              loading="lazy"
               style={{
                 width: "35px",
                 position: "absolute",
@@ -626,7 +814,7 @@ const About = () => {
                 left: 127,
               }}
               src={inshort}
-              alt=''
+              alt=""
             />
           </div>
         </div>
@@ -653,17 +841,17 @@ const About = () => {
         </div> */}
       </div>
       {/* <!-- Our Global presence dev.nur --> */}
-      <div className='our-global-presence-parent'>
-        <div className='sports'>Our Global presence</div>
-        <div className='our-global-card'>
+      <div className="our-global-presence-parent">
+        <div className="sports">Our Global presence</div>
+        <div className="our-global-card">
           {globalData?.map((data) => (
-            <div key={data.id} className='our-global-card-item'>
-              <img loading='lazy' src={data.image} alt='global-image' />
+            <div key={data.id} className="our-global-card-item">
+              <img loading="lazy" src={data.image} alt="global-image" />
               <h4>{data.title}</h4>
               <p>{data.desc}</p>
             </div>
           ))}
-          <div className='global-image-overlay'>
+          <div className="global-image-overlay">
             <h1>Coming Soon</h1>
           </div>
         </div>
