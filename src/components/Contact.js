@@ -36,7 +36,7 @@ function Contact() {
     event.preventDefault();
     // setIsSent(true);
     console.log(`name: ${name} mail: ${mail} content: ${content}`)
-    const postObj = JSON.stringify({ contact_name: name, contact_email: mail, content_txt: content });
+    const postObj = JSON.stringify({ contact_name: name, contact_email: mail, contact_message: content });
     fetch("https://admin.awcapitalltd.com/api/contactus/", { method: 'POST', headers: { 'Content-Type': 'application/json', }, body: postObj, redirect: 'follow' })
       .then(response => response.text())
       .then(result => { console.log('result: ', result); setIsSent(true) })
