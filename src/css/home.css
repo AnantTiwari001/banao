@@ -1057,9 +1057,9 @@ section {
     margin-right: 10px;
   }
 
-   .home-banner-sub-content, .home-banner-about-button{
+   /* .home-banner-sub-content, .home-banner-about-button{
     display: none;
-  }
+  } */
 
   .banner__background__text{
     top:25%

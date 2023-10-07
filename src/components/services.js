@@ -114,7 +114,7 @@ const Services = () => {
           >
             <div className='banner__background__overlay'>
               <div className='banner__background__text'>
-                <p style={ width<600? {textAlign:'center', fontSize:'32px',fontWeight:'700', alignSelf:'center', position:'relative', top:'40px'}: {display:"none"}} >OUR SERVICES</p>
+                <p style={ width<600? {textAlign:'center', fontSize:'32px',fontWeight:'700', alignSelf:'center', position:'relative', top:'100px'}: {display:"none"}} >OUR SERVICES</p>
               </div>
             </div>
             <div></div>
