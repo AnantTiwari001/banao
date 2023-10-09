@@ -234,7 +234,7 @@ const About = () => {
           className="banner__background"
         >
           <div className="banner__background__overlay__about">
-            <div className="banner__background__text">
+            <div className="banner__background__text" id="text">
               <div className="banner-title">
                 {width > 800 ? (
                   aboutData?.banner[0]?.banner_title

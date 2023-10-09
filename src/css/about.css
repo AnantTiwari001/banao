@@ -1,7 +1,9 @@
 .about {
   position: relative;
 }
-
+#text{
+  transform: translate(-50%, -70%)
+}
 /* .mobile-circle-image{
   transform: scale(0.7);
 } */
