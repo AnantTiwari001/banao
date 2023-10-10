@@ -192,7 +192,7 @@ function Home() {
               className='banner__background'
             > */}
             <ParallexComponent further={0.3} img={image}>
-              <div className={width < 800 ? "banner__background__overlay" : ""}>
+              <div className={"banner__background__overlay__about"}  >
                 <div className='banner__background__text'>
                   <div className='home-banner-title'>A&W CAPITAL</div>
                   <div className='home-banner-content'>
