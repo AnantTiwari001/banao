@@ -48,6 +48,7 @@ function Home() {
   const [width, setWidth] = useState(window.innerWidth);
   const [currentAnimation, setCurrentAnimation] = useState("change");
   const [aboutToChange, setaboutToChange] = useState(false);
+  const [bannerData, setBannerData]= useState({type:"Home",h1text:"A&W CAPITAL",h2text:"A Global Investment Bank",image:""})
   var settings = {
     dots: width > 600 ? false : true,
     infinite: true,
@@ -147,6 +148,18 @@ function Home() {
     return () => clearTimeout(timeoutId);
   }, []);
   useEffect(() => {
+    // banner Api
+    var requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    };
+    
+    fetch("https://admin.awcapitalltd.com/api/bannerimages/Home/", requestOptions)
+      .then(response => response.text())
+      .then(result => setBannerData(JSON.parse(result).data[0]))
+      .catch(error => console.log('error', error));
+
+
     dispatch(getAbout());
     dispatch(setActiveNav("home"));
     parallax();
@@ -191,12 +204,12 @@ function Home() {
               ]}
               className='banner__background'
             > */}
-            <ParallexComponent further={0.3} img={image}>
+            <ParallexComponent further={0.3} img={bannerData.image}>
               <div className={"banner__background__overlay__about"}  >
                 <div className='banner__background__text'>
-                  <div className='home-banner-title'>A&W CAPITAL</div>
+                  <div className='home-banner-title'>{bannerData.h1text}</div>
                   <div className='home-banner-content'>
-                    A Global Boutique Investment Bank
+                    {bannerData.h2text}
                   </div>
 
                   <div className='home-banner-sub-content'>

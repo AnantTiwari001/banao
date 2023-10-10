@@ -14,6 +14,12 @@ function Contact() {
   const [contactInfo, setContactInfo] = useState(undefined)
   const contact_info = useSelector((state) => state.contacts);
   const [validateError, setValidateError] = useState({ name: '', mail: '', content: '' })
+  const [bannerData, setBannerData]= useState({
+      type: "",
+      h1text: "",
+      h2text: "",
+      image: ""
+  })
 
   const ErrorStatement = {
     name: 'Enter a valid name',
@@ -22,6 +28,18 @@ function Contact() {
   }
 
   useEffect(() => {
+    // banner Api
+    var requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    };
+    
+    fetch("https://admin.awcapitalltd.com/api/bannerimages/ContactUs/", requestOptions)
+      .then(response => response.text())
+      .then(result => setBannerData(JSON.parse(result).data[0]))
+      .catch(error => console.log('error', error));
+
+
     dispatch(getContacts());
     dispatch(setActiveNav(""));
     fetch(`https://admin.awcapitalltd.com/api/contactus`)
@@ -48,7 +66,7 @@ function Contact() {
   }, []);
   return (
     <div className='contact-container main-font'>
-      <div className='contact-info'>
+      <div className='contact-info' style={{backgroundImage: `url(${bannerData.image})`}}>
         <div className='contact-info-overlay'>
           <div className='contact-info-content'>
             <h1>Get in touch</h1>

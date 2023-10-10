@@ -8,6 +8,13 @@ import mobileImage from "./../assets/team/mobile-background.webp";
 import TeamItem from "./TeamItem";
 import ParallexComponent from "./ParallexComponent";
 const Team = () => {
+  const [bannerData, setBannerData]= useState({
+    type: "",
+    h1text: "",
+    h2text: "",
+    image: ""
+  })
+
   const scroll = () => {
     window.scrollBy({
       top: window.innerHeight,
@@ -25,6 +32,18 @@ const Team = () => {
   }, []);
 
   useEffect(() => {
+    // banner Api
+    var requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    };
+    
+    fetch("https://admin.awcapitalltd.com/api/bannerimages/OurTeam/", requestOptions)
+      .then(response => response.text())
+      .then(result => setBannerData(JSON.parse(result).data[0]))
+      .catch(error => console.log('error', error));
+
+
     const timeOutId = setTimeout(() => {
       const scrollContent = document.getElementById("scroll-first-section");
       const contentHeight =
@@ -76,7 +95,7 @@ const Team = () => {
             ]}
             className='banner__background'
           > */}
-          <ParallexComponent img={image} further={0.3}>
+          <ParallexComponent img={bannerData.image} further={0.3}>
             <div className='banner__background__overlay' style={{ position: 'relative' }}>
               {/* <div className="clip" >
                 <div style={{ flex: 1, backgroundColor: 'white' }} />

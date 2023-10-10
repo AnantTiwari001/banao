@@ -17,7 +17,26 @@ const Services = () => {
   };
   const [showFirst, setshowFirst] = useState(false);
   const [width, setwidth] = useState(window.innerWidth);
+  const [bannerData, setBannerData]= useState({
+    type: "",
+    h1text: "",
+    h2text: "",
+    image: ""
+})
+
   useEffect(() => {
+    // banner Api
+    var requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    };
+    
+    fetch("https://admin.awcapitalltd.com/api/bannerimages/Services/", requestOptions)
+      .then(response => response.text())
+      .then(result => setBannerData(JSON.parse(result).data[0]))
+      .catch(error => console.log('error', error));
+
+
     const timeOutId = setTimeout(() => {
       const scrollContent = document.getElementById("scroll-first-section");
       const contentHeight =
@@ -113,7 +132,7 @@ const Services = () => {
             ]}
             className='banner__background'
           > */}
-          <ParallexComponent img={image} further={0.3}>
+          <ParallexComponent img={bannerData.image} further={0.3}>
             <div className='banner__background__overlay'>
               {/* <div className='banner__background__text'> */}
                 <p style={ width<600? {textAlign:'center', fontSize:'32px',fontWeight:'700', alignSelf:'center', }: {display:"none"}} >OUR SERVICES</p>

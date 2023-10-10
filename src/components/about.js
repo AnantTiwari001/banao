@@ -42,6 +42,12 @@ const About = () => {
   const [showScrollContent, setshowScrollContent] = useState(true);
   const [showFirst, setshowFirst] = useState(false);
   const [width, setwidth] = useState(window.innerWidth);
+  const [bannerData, setBannerData]= useState({
+    type: "",
+    h1text: "",
+    h2text: "",
+    image: ""
+})
 
   /** <!-- Our Global presence data dev.nur--> */
   const [globalData] = useState([
@@ -66,6 +72,18 @@ const About = () => {
   ]);
 
   useEffect(() => {
+    // banner Api
+    var requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    };
+    
+    fetch("https://admin.awcapitalltd.com/api/bannerimages/AboutUs/", requestOptions)
+      .then(response => response.text())
+      .then(result => setBannerData(JSON.parse(result).data[0]))
+      .catch(error => console.log('error', error));
+
+
     const widthChange = window.addEventListener("resize", () => {
       // console.log(window.innerWidth);
       setwidth(window.innerWidth);
@@ -234,7 +252,7 @@ const About = () => {
           ]}
           className="banner__background"
         > */}
-        <ParallexComponent img={image} further={0.3} >
+        <ParallexComponent img={bannerData.image} further={0.3} >
           <div className="banner__background__overlay__about">
             <div className="banner__background__text" id="text">
               <div className="banner-title">
@@ -255,7 +273,7 @@ const About = () => {
                 )}
               </div>
               <div className="about-banner-content-subheading">
-                <h4>A Differentiated Investment Bank</h4>
+                <h4>{bannerData.h2text}</h4>
               </div>
             </div>
           </div>
