@@ -652,7 +652,7 @@ section {
   letter-spacing: -0.64px;
   margin: 25px auto;
   transform: scale(0.9);
-  font-weight: 700;
+  /* font-weight: 700; */
 }
 
 .mobile-dark-background {
