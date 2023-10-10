@@ -14,11 +14,14 @@ import {
   Test,
   Privacy
 } from "./components";
+import ParallexComponent from "./components/ParallexComponent";
+import image from './assets/Image 3 (About Us page).jpeg'
 const App = () => {
   return (
     <BrowserRouter>
       <Header />
       <Routes>
+        <Route path="parallex" element={<ParallexComponent img={image}><h3>Hello World</h3></ParallexComponent>} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/test" element={<Test />} />

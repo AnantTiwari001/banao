@@ -605,7 +605,7 @@ section {
 }
 
 .home-banner-title {
-  font-weight: 900;
+  font-weight: 750;
   line-height: 50px;
   text-align: center;
   font-size: 60px;
@@ -619,7 +619,7 @@ section {
 .home-banner-content {
   text-align: center;
   font-size: 65px;
-  font-weight: 600;
+  font-weight: 750;
   position: relative;
   bottom: 3px;
 }
@@ -652,6 +652,7 @@ section {
   letter-spacing: -0.64px;
   margin: 25px auto;
   transform: scale(0.9);
+  font-weight: 700;
 }
 
 .mobile-dark-background {
