@@ -6,6 +6,7 @@ import "../css/team.css";
 import image from "./../assets/team/background.webp";
 import mobileImage from "./../assets/team/mobile-background.webp";
 import TeamItem from "./TeamItem";
+import ParallexComponent from "./ParallexComponent";
 const Team = () => {
   const scroll = () => {
     window.scrollBy({
@@ -55,7 +56,7 @@ const Team = () => {
       {currentNavState && <div className='mobile-overlay'></div>}
       <div className='mainContainer'>
         <div className='team__banner'>
-          <ParallaxBanner
+          {/* <ParallaxBanner
             layers={[
               {
                 image: width > 800 ? image : mobileImage,
@@ -74,7 +75,8 @@ const Team = () => {
               },
             ]}
             className='banner__background'
-          >
+          > */}
+          <ParallexComponent img={image} further={0.3}>
             <div className='banner__background__overlay' style={{ position: 'relative' }}>
               <div className="clip" >
                 <div style={{ flex: 1, backgroundColor: 'white' }} />
@@ -87,7 +89,8 @@ const Team = () => {
                 <p id="title">We are<br/> A&w Capital</p>
               </div>
             </div>
-          </ParallaxBanner>
+          </ParallexComponent>
+          {/* </ParallaxBanner> */}
         </div>
         <div className='team-container' id='scroll-first-section'>
           {teamMembers && (

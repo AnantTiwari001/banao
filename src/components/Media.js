@@ -8,6 +8,7 @@ import "../css/media.css";
 import { getMedia, setActiveNav } from "./../actions";
 import image from "./../assets/media/media-update-banner.png";
 import MediaDetails from "./MediaDetails";
+import ParallexComponent from "./ParallexComponent";
 
 const Media = () => {
   const [showFirst, setshowFirst] = useState(false);
@@ -54,7 +55,7 @@ const Media = () => {
     <div className='body main-font'>
       {currentNavState && <div className='mobile-overlay'></div>}
       <div className='about__banner'>
-        <ParallaxBanner
+        {/* <ParallaxBanner
           layers={[
             {
               image: width > 800 ? image : mobileImage,
@@ -76,13 +77,15 @@ const Media = () => {
             },
           ]}
           className='banner__background'
-        >
+        > */}
+        <ParallexComponent img={image} further={0.3}>
           <div className='banner__background__overlay__about'>
             <div className='banner__background__text'>
-            <p style={ width<600? {textAlign:'center', fontSize:'32px',fontWeight:'700', alignSelf:'center',position:'relative', top:'25px'}: {display:"none"}} >OUR SERVICES</p>
+            <p style={ width<600? {textAlign:'center', fontSize:'32px',fontWeight:'700', alignSelf:'center'}: {display:"none"}} >OUR SERVICES</p>
             </div>
           </div>
-        </ParallaxBanner>
+        </ParallexComponent>
+        {/* </ParallaxBanner> */}
       </div>
 
       <div className='section media-container' id='scroll-first-section'>

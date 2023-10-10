@@ -21,7 +21,7 @@ const App = () => {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="parallex" element={<ParallexComponent img={image}><h3>Hello World</h3></ParallexComponent>} />
+        <Route path="parallex" element={<ParallexComponent img={image} further={0.3}><h3>Hello World</h3></ParallexComponent>} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/test" element={<Test />} />

@@ -35,6 +35,7 @@ import nfl from "./../assets/about/pngwing 3.png";
 
 import "./../css/about.css";
 import "./../css/carousel.css";
+import ParallexComponent from "./ParallexComponent";
 
 const About = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -210,7 +211,7 @@ const About = () => {
     >
       {currentNavState && <div className="mobile-overlay"></div>}
       <div className="about__banner">
-        <ParallaxBanner
+        {/* <ParallaxBanner
           layers={[
             {
               image: image,
@@ -232,7 +233,8 @@ const About = () => {
             },
           ]}
           className="banner__background"
-        >
+        > */}
+        <ParallexComponent img={image} further={0.3} >
           <div className="banner__background__overlay__about">
             <div className="banner__background__text" id="text">
               <div className="banner-title">
@@ -258,7 +260,8 @@ const About = () => {
             </div>
           </div>
           <div></div>
-        </ParallaxBanner>
+        </ParallexComponent>
+        {/* </ParallaxBanner> */}
       </div>
 
       <div

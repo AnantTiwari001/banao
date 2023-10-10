@@ -12,6 +12,7 @@ import x_icon from "../assets/team/x-icon-black.svg";
 import "../css/client.css";
 import { getAbout, getWorks, setActiveNav } from "./../actions";
 import ClientInfo from "./ClientInfo";
+import ParallexComponent from "./ParallexComponent";
 
 function Clients() {
   const [ourWorks, setourWorks] = useState([]);
@@ -85,7 +86,7 @@ function Clients() {
     <div className='body main-font'>
       {currentNavState && <div className='mobile-overlay'></div>}
       <div className='client__banner'>
-        <ParallaxBanner
+        {/* <ParallaxBanner
           layers={[
             {
               image: width > 800 ? image : mobileImage,
@@ -106,14 +107,16 @@ function Clients() {
             },
           ]}
           className='banner__background'
-        >
+        > */}
+        <ParallexComponent img={image} further={0.3} >
           <div className='banner__background__overlay__about'>
             <div className='banner__background__text'>
              
             </div>
           </div>
           <div></div>
-        </ParallaxBanner>
+        </ParallexComponent>
+        {/* </ParallaxBanner> */}
       </div>
       <div style={{ marginTop: "0px" }} id='scroll-first-section'>
         {showDetails && (

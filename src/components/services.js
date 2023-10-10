@@ -6,6 +6,7 @@ import { getServices, setActiveNav } from "../actions";
 import mobileImage from "./../assets/Image-5-mobile.webp";
 import image from "./../assets/service-banner-image.png";
 import "./../css/services.css";
+import ParallexComponent from "./ParallexComponent";
 
 const Services = () => {
   const scroll = () => {
@@ -89,7 +90,7 @@ const Services = () => {
       {currentNavState && <div className='mobile-overlay'></div>}
       <div className='services'>
         <div className='services__banner'>
-          <ParallaxBanner
+          {/* <ParallaxBanner
             layers={[
               {
                 image: width > 800 ? image : mobileImage,
@@ -111,14 +112,16 @@ const Services = () => {
               },
             ]}
             className='banner__background'
-          >
+          > */}
+          <ParallexComponent img={image} further={0.3}>
             <div className='banner__background__overlay'>
-              <div className='banner__background__text'>
-                <p style={ width<600? {textAlign:'center', fontSize:'32px',fontWeight:'700', alignSelf:'center', position:'relative', top:'100px'}: {display:"none"}} >OUR SERVICES</p>
-              </div>
+              {/* <div className='banner__background__text'> */}
+                <p style={ width<600? {textAlign:'center', fontSize:'32px',fontWeight:'700', alignSelf:'center', }: {display:"none"}} >OUR SERVICES</p>
+              {/* </div> */}
             </div>
-            <div></div>
-          </ParallaxBanner>
+            {/* <div></div> */}
+          </ParallexComponent>
+          {/* </ParallaxBanner> */}
         </div>
         <div className='section service-section' id='scroll-first-section'>
           <div className='service-container'>

@@ -37,6 +37,7 @@ import clientLogo7 from "../assets/home/KukuFM.svg";
 import clientLogo2 from "../assets/home/Nazara.svg";
 import clientLogo8 from "../assets/home/sportz.png";
 import HomeDescItem from "./HomeDescItem";
+import ParallexComponent from "./ParallexComponent";
 const preloadSrcList = [image, mobileImage];
 
 function Home() {
@@ -167,7 +168,7 @@ function Home() {
         <div className='body main-font'>
           {currentNavState && <div className='mobile-overlay'></div>}
           <div className='about__banner'>
-            <ParallaxBanner
+            {/* <ParallaxBanner
               layers={[
                 {
                   image: width > 800 ? image : mobileImage,
@@ -189,7 +190,8 @@ function Home() {
                 },
               ]}
               className='banner__background'
-            >
+            > */}
+            <ParallexComponent further={0.3} img={image}>
               <div className={width < 800 ? "banner__background__overlay" : ""}>
                 <div className='banner__background__text'>
                   <div className='home-banner-title'>A&W CAPITAL</div>
@@ -208,7 +210,8 @@ function Home() {
                   </Link>
                 </div>
               </div>
-            </ParallaxBanner>
+            </ParallexComponent>
+            {/* </ParallaxBanner> */}
           </div>
 
           {/* <!-- Our Home Services Section Here dev.nur--> */}

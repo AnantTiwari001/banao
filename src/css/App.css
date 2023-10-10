@@ -111,7 +111,7 @@
   z-index: 1;
 }
 .banner__background__text {
-  width: 100%;
+  width: 100vw;
   color: white;
   position: absolute;
   top: 50%;
