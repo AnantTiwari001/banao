@@ -333,7 +333,7 @@ function Home() {
                       </p>
                     </div>
                     <div className='home-carousel-footer'>
-                      <img loading='lazy' src={item.profile_image} alt='avatar' />
+                      <img src={`https://admin.awcapitalltd.com${item.profile_image}`} loading="lazy" alt="avatar" />
                       <div className='home-carousel-footer-text'>
                         <p className='home-carousel-footer-text-main'>
                           {item.profile_name}
