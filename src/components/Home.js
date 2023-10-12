@@ -49,6 +49,14 @@ function Home() {
   const [currentAnimation, setCurrentAnimation] = useState("change");
   const [aboutToChange, setaboutToChange] = useState(false);
   const [bannerData, setBannerData]= useState({type:"Home",h1text:"A&W CAPITAL",h2text:"A Global Investment Bank",image:""})
+  const arrayEx= ['ram ', 'hari', 'krishna', 'shayam'];
+  const [testimonialData, setTestimonialData]= useState([{
+    id: null,
+    profile_name: "Kate Grey",
+    profile_image: "/media/images/Ellipse_29.4bdd7fb46cbf48b5c2cd.png",
+    description: "Matthew and the A&W team are our gateway into Europe and they also know and understand the Indian sport and media landscape as well as anyone",
+    company_name: "ABC"
+  }])
   var settings = {
     dots: width > 600 ? false : true,
     infinite: true,
@@ -159,6 +167,10 @@ function Home() {
       .then(result => setBannerData(JSON.parse(result).data[0]))
       .catch(error => console.log('error', error));
 
+    fetch("https://admin.awcapitalltd.com/api/testimonals/", requestOptions)
+      .then(response => response.text())
+      .then(result => setTestimonialData(JSON.parse(result).data))
+      .catch(error => console.log('error', error));
 
     dispatch(getAbout());
     dispatch(setActiveNav("home"));
@@ -302,7 +314,7 @@ function Home() {
                 {...settings}
                 className='carousel-slick'
                 ref={(ref) => (sliderRef.current = ref)}
-              >
+              >{testimonialData.map(item=>(
                 <div>
                   <div
                     className={
@@ -317,26 +329,24 @@ function Home() {
                     </div>
                     <div className='home-carousel-text'>
                       <p>
-                        Matthew and the A&W team have worked with us both in
-                        India and international markets. Their knowledge,
-                        experience, insight and contacts are unrivalled and
-                        invaluable.
+                        {item.description}
                       </p>
                     </div>
                     <div className='home-carousel-footer'>
-                      <img loading='lazy' src={avatar} alt='avatar' />
+                      <img loading='lazy' src={item.profile_image} alt='avatar' />
                       <div className='home-carousel-footer-text'>
                         <p className='home-carousel-footer-text-main'>
-                          Hemchandra Javeri
+                          {item.profile_name}
                         </p>
                         <p className='home-carousel-footer-text-sub'>
-                          CEO at Zeven
+                          {item.company_name}
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div>
+              ))}
+                {/* <div>
                   <div
                     className={
                       aboutToChange
@@ -429,8 +439,8 @@ function Home() {
                       </div>
                     </div>
                   </div>
-                </div>
-                <div>
+                </div> */}
+                {/* <div>
                   <div
                     className={
                       aboutToChange
@@ -460,7 +470,7 @@ function Home() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </Slider>
               <div className='carousel-controls' style={{zIndex:'100'}}>
                 <div className='carousel-controls-child' onClick={() => { }}>
@@ -489,7 +499,7 @@ function Home() {
 
           <section className='home-client-contact'>
             <div className='home-client-contact-details'>
-              <div className='section-heading-contact-us'>Contact Us</div>
+              <div className='section-heading-contact-us' style={{fontWeight:'500'}}>Contact Us</div>
               <h1
                 className='desktop-client-contact-header'
               >
