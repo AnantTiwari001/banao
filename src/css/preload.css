@@ -36,9 +36,11 @@
 
 
 
-.footer {
+/* .footer {
   display: none;
-}
+  position: absolute;
+  bottom: 0;
+} */
 
 .preload__container {
   position: absolute;

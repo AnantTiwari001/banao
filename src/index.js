@@ -7,6 +7,7 @@ import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import reducers from "./reducers";
 import "./assets/avenir-lt-pro-cufonfonts/AvenirLTProBlack.otf";
+import "./assets/avenir-lt-pro-cufonfonts/Montserrat-Black.ttf"
 import { ParallaxProvider } from "react-scroll-parallax";
 const store = createStore(reducers, compose(applyMiddleware(thunk)));
 
