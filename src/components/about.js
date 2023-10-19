@@ -350,7 +350,7 @@ const About = () => {
                 {aboutData?.about[0]?.title}
               </div>
               <div className="parallax-content-text-content">
-                <p>{aboutData?.about[0]?.content_1}</p>
+                <p style={{fontFamily:'Arial', letterSpacing:'0.25px'}}>{aboutData?.about[0]?.content_1}</p>
                 {aboutData?.about[0]?.content_2}
               </div>
             </div>

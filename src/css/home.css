@@ -39,10 +39,10 @@ section {
   margin: 72px auto;
 }
 .section-heading {
-  font-family: "Avenir LT Pro", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 
   color: #00236A;
-  font-size: 20px;
+  font-size: 19px;
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
@@ -53,7 +53,7 @@ section {
 }
 .section-heading-contact-us {
   color: #00236a;
-  font-size: 20px;
+  font-size: 19px;
   font-style: normal;
   font-weight: 600;
   line-height: 24px;
@@ -61,6 +61,7 @@ section {
   width: fit-content;
   margin-bottom: 20px;
   padding: 2px 5px;
+  font-family: initial;
 }
 .home-desc {
   display: grid;
@@ -404,9 +405,11 @@ section {
   font-size: 22px;
   font-weight: 500;
   line-height: 25px;
-  letter-spacing: 0em;
+  letter-spacing: 0.5px;
   height: 140px;
   color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .home-carousel-footer {

@@ -254,6 +254,7 @@
   padding-bottom: 3%;
   color: #221e1e;
   opacity: 0.7;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .team-details-text-description-1 {
   font-size: 16px;
@@ -264,6 +265,7 @@
   padding-bottom: 24px;
   color: #221e1e;
   opacity: 0.7;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .banner {
   background: linear-gradient(
