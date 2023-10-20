@@ -7,6 +7,13 @@
   color: #757575;
 }
 
+.header-image{
+  height: 100%;
+  width: 240px;
+  object-fit: cover;
+  transform: scale(1.15);
+}
+
 .header-nav {
   list-style: none;
   display: flex;

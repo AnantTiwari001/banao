@@ -4,7 +4,8 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { setNav } from "../actions";
-import logo from "./../assets/logo.svg";
+// import logo from "./../assets/logo.svg";
+import logo from "./../assets/Logo.jpg";
 import "./../css/header.css";
 
 const Header = () => {
@@ -55,8 +56,8 @@ const Header = () => {
 
   return (
     <div className='header-caontainer main-font'>
-      <div className='header'>
-        <div>
+      <div className='header' style={{overflow:'hidden'}}>
+        <div style={{height:'100%'}} >
           <Link to='/'>
             <img loading="lazy" src={logo} alt='logo' className='header-image' />
           </Link>
