@@ -685,6 +685,9 @@ section {
   .lowOpacity{
     display: none;
   }
+  .home-client-item{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .banner-home {

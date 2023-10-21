@@ -771,7 +771,7 @@
       37% 93%,
       0 93%
     );
-    height: 105vh;
+    height: 88vh;
   }
   .about-section {
     width: 95%;
@@ -1085,10 +1085,13 @@
     width: 90%;
   }
   .parallax-image {
-    top: 95%;
+    top: 72%;
   }
   #mobile-circle{
     transform: translateY(110px);
+  }
+  .about__parallax-section{
+    margin-bottom: 65px;
   }
 }
 

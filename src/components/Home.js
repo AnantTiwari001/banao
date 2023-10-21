@@ -285,7 +285,7 @@ function Home() {
           <section className='home-client'>
             <div className='section-heading'>Our Clientele</div>
             <div className='home-client-item'>
-              <img src={clientLogo3} style={{ objectFit: 'cover', position: 'relative', right: '10px' }} alt='adidas' />
+              <img src={clientLogo3} style={{ objectFit: 'cover', position: 'relative', right: '10px' }} alt='adidas' id="bigImage" />
 
               <img src={clientLogo2} alt='adidas' />
 
