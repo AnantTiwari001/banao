@@ -154,7 +154,7 @@
 }
 .parallax-image {
   position: absolute;
-  top: 60%;
+  top: 50%;
   height: 560px;
   width: 100%;
 }
@@ -364,6 +364,7 @@
 .our-global-card-item p {
   text-align: center;
   font-size: 16px;
+  display: none;
 }
 
 /* <!-- Our Global Style ends dev.nur --> */

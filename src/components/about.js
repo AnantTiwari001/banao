@@ -59,7 +59,7 @@ const About = () => {
     },
     {
       id: 2,
-      title: "Mumbai, IN",
+      title: "Mumbai, India",
       desc: "Empowering Growth in India's Financial Hub",
       image: gbImage2,
     },

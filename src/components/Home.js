@@ -242,7 +242,7 @@ function Home() {
           {/* <!-- Our Home Services Section Here dev.nur--> */}
           <section className='home-services-content'>
             {/* <!-- services header --> */}
-            <div className='section-heading'>Our Services</div>
+            <div className='section-heading'> <Link to='/services' style={{color:'inherit', textDecoration:'none'}}>Our Services</Link></div>
             {/* <!-- services header --> */}
 
             {/* <!-- services content --> */}

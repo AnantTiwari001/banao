@@ -88,7 +88,7 @@ function ClientInfo({
           />
         </div>
       </div>
-      <p className="year-text" style={isHover ?{}: {}} >2021</p>
+      <p className="year-text" style={{height:0, fontWeight:'500'}} >Year - 2021</p>
     </div>
   );
 }
