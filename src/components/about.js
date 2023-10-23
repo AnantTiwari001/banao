@@ -863,7 +863,7 @@ const About = () => {
       </div>
       {/* <!-- Our Global presence dev.nur --> */}
       <div className="our-global-presence-parent">
-        <div className="sports">Our Global presence</div>
+        <div className="sports" style={{color:'#00236a'}}>Our Global presence</div>
         <div className="our-global-card">
           {globalData?.map((data) => (
             <div key={data.id} className="our-global-card-item">
@@ -873,7 +873,7 @@ const About = () => {
             </div>
           ))}
           <div className="global-image-overlay">
-            <h1>Coming Soon</h1>
+            <h1 style={{color:'#00236a'}}>Coming Soon</h1>
           </div>
         </div>
       </div>
