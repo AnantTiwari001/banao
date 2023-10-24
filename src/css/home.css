@@ -18,12 +18,12 @@
   border-radius: 11px;
 }
 .service-animation:hover{
-  animation: serviceAni 0.3s ease-in forwards;
+  animation: serviceAni 0.1s ease-in forwards;
 
 }
 
 .home-services-content-item{
-  transition: color 0.3s ease-in;
+  transition: color 0.2s ease-in;
 }
 
 
@@ -82,7 +82,7 @@ section {
 }
 .section-heading-contact-us {
   color: #00236a;
-  font-size: 19px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 600;
   line-height: 24px;
