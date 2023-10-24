@@ -5,6 +5,7 @@ import "../css/preload.css";
 function Preload() {
   return (
     <body className='preload__container'>
+      <img loading='lazy' src={preloadGif} alt='loader' style={{position:'absolute', top:'-9%', left:'44%', scale:'0.8'}} />
       <div style={{height:'100vh', }}>
         <div style={{height:'85px', padding:'0 50px', display:'flex', justifyContent:'space-between', alignItems:'center', }}>
           <div style={{width:'241px', height:'53px'}} className="skeleton">
