@@ -541,10 +541,10 @@ function Home() {
           </div>
 
           <section className="home-client-contact">
-            <div className="home-client-contact-details">
+            <div className="home-client-contact-details"  >
               <div
                 className="section-heading-contact-us"
-                style={{ fontWeight: "500" }}
+                style={{ fontWeight: "550", fontSize:'22px' }}
               >
                 Contact Us
               </div>
