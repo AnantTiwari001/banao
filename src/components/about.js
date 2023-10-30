@@ -100,15 +100,22 @@ const About = () => {
   }, []);
   const innerHeight = window.innerHeight;
 
+
+  useEffect(()=>{
+    const timeOut = setTimeout(() => {
+      window.scrollTo(0,850)
+    }, 1800);
+    return ()=> clearTimeout(timeOut)
+  },[])
   // console.log(window.innerHeight, window.scrollY);
 
-  useEffect(() => {
-    const timeOutId = setTimeout(() => {
-      const scrollContent = document.getElementById("scroll-first-section");
-      scrollContent.scrollIntoView();
-    }, 1800);
-    return () => clearTimeout(timeOutId);
-  }, []);
+  // useEffect(() => {
+  //   const timeOutId = setTimeout(() => {
+  //     const scrollContent = document.getElementById("scroll-first-section");
+  //     scrollContent.scrollIntoView();
+  //   }, 2500);
+  //   return () => clearTimeout(timeOutId);
+  // }, []);
   useEffect(() => {
     let time;
     if (showScrollContent === false) {
@@ -229,29 +236,6 @@ const About = () => {
     >
       {currentNavState && <div className="mobile-overlay"></div>}
       <div className="about__banner">
-        {/* <ParallaxBanner
-          layers={[
-            {
-              image: image,
-              speed: -85,
-              scale: [1.06, 1.26],
-              expanded: false,
-            },
-            {
-              image: image,
-              speed: -60,
-              scale: [1.03, 1.23],
-              expanded: false,
-            },
-            {
-              image: image,
-              speed: showFirst ? -10 : 0,
-              // scale: [1.01, 1.01],
-              expanded: false,
-            },
-          ]}
-          className="banner__background"
-        > */}
         <ParallexComponent img={bannerData.image} further={0.3} >
           <div className="banner__background__overlay__about">
             <div className="banner__background__text" id="text">
@@ -279,7 +263,6 @@ const About = () => {
           </div>
           <div></div>
         </ParallexComponent>
-        {/* </ParallaxBanner> */}
       </div>
 
       <div
