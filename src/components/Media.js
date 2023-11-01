@@ -116,13 +116,13 @@ const Media = () => {
 
                 <div className='media-details-date'>
                   <p>{media[0]?.category.category_name}</p>
-                  <img
+                  {/* <img
                     loading='lazy'
                     src={v1}
                     alt='vector'
                     className='vector-image'
-                  />
-                  <p>{media[0]?.published_at}</p>
+                  /> */}
+                  <p style={{marginRight:3}}>{media[0]?.published_at}</p>
                 </div>
                 <div className='title'>
                   <a

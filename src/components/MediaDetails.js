@@ -26,8 +26,8 @@ function MediaDetails({
       />
       <div className={!fromAbout ? "date-media" : "date"}>
         <p>{sportName}</p>
-        <img loading='lazy' src={v1} alt='vector' className='vector-image' />
-        <p>{date}</p>
+        {/* <img loading='lazy' src={v1} alt='vector' className='vector-image' /> */}
+        <p style={{marginRight:3}}>{date}</p>
       </div>
       <div className={!fromAbout ? "title" : "about-media-title"}>
         <a

@@ -65,7 +65,7 @@
   align-items: baseline;
   margin-top: 15px;
   justify-content: space-between;
-  width: 280px;
+  /* width: 280px; */
 }
 .title {
   font-size: 24px;
@@ -168,7 +168,7 @@
   align-items: baseline;
   margin-top: 15px;
   justify-content: space-between;
-  width: 60%;
+  /* width: 60%; */
 }
 .media-relative {
   position: relative;
