@@ -147,6 +147,9 @@ img{
   height: 216px;
   padding: 3px 15px;
   box-sizing: border-box;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
 }
 
 .client-box-lower .image {
