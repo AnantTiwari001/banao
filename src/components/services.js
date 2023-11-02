@@ -64,6 +64,8 @@ const Services = () => {
   useEffect(() => {
     dispatch(getServices());
     dispatch(setActiveNav("services"));
+    console.log('service points: ');
+    console.log(servicesData.services)
   }, [dispatch]);
   const data = [
     {
@@ -171,11 +173,14 @@ const Services = () => {
                   </div>
                   <div className='service-content'>
                     <div className='service-content-ul'>
+                      {
+                        item?.feature.length>1 &&
                       <ul>
                         {item?.feature.split(",").map((data) => {
                           return <li>{data}</li>;
                         })}
                       </ul>
+                      }
                     </div>
                   </div>
                 </>

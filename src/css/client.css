@@ -6,6 +6,11 @@
 .two_images_3-second{
   scale: 0.8;
 }
+
+img{
+  max-width: 100%;
+}
+
 .footer-nav-container{
   position: relative;
   top: 15px;
@@ -140,6 +145,8 @@
   padding-bottom: 5px;
   position: relative;
   height: 216px;
+  padding: 3px 15px;
+  box-sizing: border-box;
 }
 
 .client-box-lower .image {

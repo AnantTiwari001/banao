@@ -21,7 +21,7 @@ const ParallexComponent = ({img, children, further}) => {// futher - 1 is furthe
   }, []);
   return (
     <div className="banner" onClick={()=>console.log(scrollPosition)} >
-        <img src={img} style={{ width:'100%', height:'88vh', objectFit:'cover', translate:`0 ${scrollPosition * further}px`}}  />
+        <img src={img} style={{ width:'100%', height:'88vh', objectFit:'cover', translate:`0 ${scrollPosition * further}px`, scale:'1.1'}}  />
         <div className="content">
             {/* <h3>Hello World</h3> */}
             {children}
