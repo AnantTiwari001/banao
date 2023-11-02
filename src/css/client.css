@@ -329,6 +329,9 @@ img{
 /* Media Queries */
 
 @media (max-width: 800px) {
+  .client-box-lower{
+    height: 280px;
+  }
   .client-box-container {
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
