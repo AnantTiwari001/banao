@@ -111,36 +111,10 @@ const Services = () => {
       {currentNavState && <div className='mobile-overlay'></div>}
       <div className='services'>
         <div className='services__banner'>
-          {/* <ParallaxBanner
-            layers={[
-              {
-                image: width > 800 ? image : mobileImage,
-                speed: -65,
-                scale: [1.06, 1.26],
-                expanded: false,
-              },
-              {
-                image: width > 800 ? image : mobileImage,
-                speed: -30,
-                scale: [1.03, 1.23],
-                expanded: false,
-              },
-              {
-                image: width > 800 ? image : mobileImage,
-                speed: showFirst ? -15 : 0,
-                // scale: [-0.1, 1.01],
-                expanded: false,
-              },
-            ]}
-            className='banner__background'
-          > */}
           <ParallexComponent img={bannerData.image} further={0.3}>
             <div className='banner__background__overlay'>
-              {/* <div className='banner__background__text'> */}
                 <p style={ width<600? {textAlign:'center', fontSize:'32px',fontWeight:'700', alignSelf:'center', }: {display:"none"}} >OUR SERVICES</p>
-              {/* </div> */}
             </div>
-            {/* <div></div> */}
           </ParallexComponent>
           {/* </ParallaxBanner> */}
         </div>
@@ -163,6 +137,7 @@ const Services = () => {
                   </div>
                   <div
                     className={`service-content service-description-${item.id}`}
+                    style={[]}
                   >
                     {item.description}
                   </div>
