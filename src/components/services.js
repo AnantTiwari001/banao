@@ -142,7 +142,7 @@ const Services = () => {
                   </div>
                   <div
                     className={`service-content service-description-${item.id}`}
-                    style={item?.feature.length>1?{}:{width:`${paraWidth}px`}}
+                    style={{width:`${paraWidth}px`}}
                   >
                     {item.description}
                   </div>
