@@ -203,8 +203,8 @@ img{
   justify-self: center;
   height: 60px;
   width: 134px;
-  margin-top: 38px;
-  margin-bottom: 20px;
+  /* margin-top: 38px; */
+  /* margin-bottom: 20px; */
   object-fit: contain;
 }
 .client-box-lower .two_images_4-first {

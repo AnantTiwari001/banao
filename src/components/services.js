@@ -60,12 +60,17 @@ const Services = () => {
   const dispatch = useDispatch();
   const servicesData = useSelector((state) => state.services);
   const currentNavState = useSelector((state) => state.showMobileNav);
+  
+  const [paraWidth, setParaWidth]= useState(600);
+  const getParaWidth=()=>{
+    // document.querySelector('.service-heading')
+    setParaWidth(screen.width-document.querySelector('.service-content').getBoundingClientRect().x - document.querySelector('.service-heading').getBoundingClientRect().x)
+  }
 
   useEffect(() => {
     dispatch(getServices());
     dispatch(setActiveNav("services"));
-    console.log('service points: ');
-    console.log(servicesData.services)
+    getParaWidth();
   }, [dispatch]);
   const data = [
     {
@@ -137,7 +142,7 @@ const Services = () => {
                   </div>
                   <div
                     className={`service-content service-description-${item.id}`}
-                    style={[]}
+                    style={item?.feature.length>1?{}:{width:`${paraWidth}px`}}
                   >
                     {item.description}
                   </div>
