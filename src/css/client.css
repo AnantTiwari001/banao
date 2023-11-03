@@ -223,6 +223,10 @@ img{
   width: 114px;
   object-fit: contain;
 }
+.logo > img{
+  width: 100%;
+  max-width: 100%;
+}
 
 .client-box-lower p {
   font-size: 16px;
